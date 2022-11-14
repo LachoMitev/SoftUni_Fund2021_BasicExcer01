@@ -1,0 +1,33 @@
+#include <iostream>
+
+int main()
+{
+	int numbers = 0;
+	int min = 0;
+	int max = 0;
+
+	std::cin >> numbers;
+
+	for (int i = 0; i < numbers; i++)
+	{
+		int currentNumbers = 0;
+		std::cin >> currentNumbers;
+		if(i==0)
+		{
+			min = currentNumbers;
+			max = currentNumbers;
+			continue;
+		}
+		if (currentNumbers < min)
+		{
+			min = currentNumbers;
+		}
+		if (currentNumbers > max) {
+			max = currentNumbers;
+		}
+	}
+
+	std::cout << min << " " << max << std::endl;
+
+	return 0;
+}
